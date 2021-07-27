@@ -8,8 +8,10 @@
 <!-- Microblog Area -->
 
 <!-- only show section if at least one microblog post -->
-{{ $microposts := (where .Site.RegularPages "Section" "==" "micro") }}
-{{ if ge (len $microposts) 1 }}
+{{if .Site.Params.Microblog.enable}}
+    {{ $microposts := (where .Site.RegularPages "Section" "==" "micro") }}
+    {{ if ge (len $microposts) 1 }}
+{{ end }}
 
 <section class="section-highlight">
     
@@ -62,8 +64,10 @@
 
     <div class="container">
 
-        <a href="/blog"><h2 class="areatitle">{{ i18n "blog_title" }}</h2></a>
-
+        {{if .Site.Params.Microblog.enable}}
+            <a href="/blog"><h2 class="areatitle">{{ i18n "blog_title" }}</h2></a>
+        {{end}}
+        
         <!-- Loop through all posts filtered by type "article" -->
         {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Section" "==" "blog") }}
         {{ range .Paginator.Pages }}
