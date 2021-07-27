@@ -324,6 +324,7 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
+  background-color: #F9FAFB;
 }
 
 body,
@@ -2584,7 +2585,7 @@ a.box:active {
 }
 
 .subtitle+.title {
-  margin-top: -18px;
+  margin-top: -14px;
 }
 
 .subtitle.is-1 {
@@ -6447,11 +6448,6 @@ a.panel-block:hover {
   padding: 40px 20px 80px;
 }
 
-code,
-html {
-  background-color: #fff;
-}
-
 .footer a,
 .footer a:visited {
   color: #42464c;
@@ -6535,8 +6531,13 @@ article+article {
 }
 
 code {
-  color: inherit;
   font-size: 90%;
+  padding: 2px 4px;
+  margin: 0 2px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  color: inherit;
 }
 
 .content h1::before,
@@ -6555,7 +6556,12 @@ code {
 .content h4 code,
 .content h5 code,
 .content h6 code {
-  background-color: #8a2be2;
+  font-size: 90%;
+  padding: 2px 4px;
+  margin: 0 2px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f8f8f8;
 }
 
 .content h1+h2:not(:first-child),
