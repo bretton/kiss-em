@@ -13,10 +13,9 @@
           {{- $social := ( .Site.Params.social ) -}}
           {{- range $platform := $social.config.platforms -}}
           {{- with $username := ( index $social $platform ) -}}
-         
           <!-- do not open "about" in new tab -->
           <a class="level-item" aria-label="{{ $platform }}" href='{{ print ( index $.Site.Data.theme.social.base $platform ) $username }}'
-          {{ if ne $platform "about" }} target='_blank' {{ end }} rel='noopener'>
+          {{ if or (eq $platform "codepen") (eq $platform "facebook") (eq $platform "github") (eq $platform "instagram") (eq $platform "linkedin") (eq $platform "twitter") (eq $platform "youtube") (eq $platform "gitlab") (eq $platform "xing") }} target='_blank' {{ end }} rel='noopener'>
             <span class="icon">
               <i class>
                 {{- partial "svg/icons" $platform -}}
