@@ -13,18 +13,17 @@
         {{ $size := $min }}
 
         {{ $data := .Data }}
-        {{ range $key, $value := .Data.Terms.ByCount }}
+        {{ range $key, $value := .Data.Terms.Alphabetical }}
             {{ $size := (add (mul (div $value.Count $biggest) (sub $max $min)) $min) }}
             {{ $size := (cond (eq $biggest $smallest) $min $size) }}
 
 
             <a class = "subtitle is-6" href="{{ $.Site.LanguagePrefix | absURL }}/{{ $data.Plural }}/{{ $value.Name | urlize }}/">
-              #{{ $value.Name }}
+              {{ $value.Name }}
             </a>
 
         {{ end }}
             </div>
 </div>
 </section>
-{{ partial "page-navigation" . }}
 {{ partial "footer" . }}
