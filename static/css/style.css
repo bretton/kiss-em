@@ -1,3 +1,26 @@
+#TableOfContents {
+  background: transparent;
+  margin-bottom: 2rem;
+  font-size: 1.1em;
+}
+
+#TableOfContents a {
+  color: #b52323;
+}
+
+#TableOfContents a:hover {
+  border-bottom: 1px solid #b52323;
+}
+
+#TableOfContents a + ul {
+  padding-left:2em;
+}
+
+#TableOfContents a + ul strong {
+  color: #b52323;
+  font-weight: 620;
+}
+
 .card,
 .highlight,
 .highlight pre,
