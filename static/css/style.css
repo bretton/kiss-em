@@ -6564,10 +6564,7 @@ article+article {
 
 code {
   font-size: 90%;
-  padding: 2px 4px;
-  margin: 0 2px;
   border: 1px solid #ddd;
-  border-radius: 4px;
   background-color: #f8f8f8;
   color: inherit;
 }
