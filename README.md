@@ -23,7 +23,7 @@ If you want to change the order of the social menu icons, modify the `[params.so
 
 ```toml
 [params.social.config]
-platforms = ["github","facebook","twitter","instagram","email","codepen","linkedin"]
+platforms = ["github","codeberg","facebook","twitter","instagram","email","codepen","linkedin"]
 ```
 
 The social menu icons will appear in the order you specify in the `platforms` array.
